@@ -1,0 +1,142 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #444;
+    border-bottom: 2px solid #ff6f61;
+    padding-bottom: 10px;
+}
+
+/* Product and Cart Layout */
+.tienda, .carrito {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tienda {
+    margin-bottom: 40px;
+}
+
+.tienda .producto, .carrito ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.tienda .producto:last-child, .carrito ul li:last-child {
+    border-bottom: none;
+}
+
+/* Product Button */
+button {
+    padding: 10px 15px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e65c54;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Eliminar Producto Button */
+.eliminar-producto {
+    background-color: #d9534f;
+}
+
+.eliminar-producto:hover {
+    background-color: #c9302c;
+}
+
+/* Eliminar Compra Button */
+.eliminar-compra {
+    background-color: #f0ad4e;
+}
+
+.eliminar-compra:hover {
+    background-color: #ec971f;
+}
+
+/* Cart Styles */
+.carrito ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.carrito ul li {
+    font-size: 1rem;
+    color: #555;
+}
+
+.carrito ul li span {
+    font-weight: bold;
+    color: #ff6f61;
+}
+
+/* Summary section */
+#subtotal1, #descuento, #subtotal2, #igv, #total {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#total {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    border-top: 2px solid #ff6f61;
+    padding-top: 10px;
+}
+
+/* Summary labels */
+#subtotal1, #descuento, #subtotal2, #igv {
+    color: #555;
+}
+
+/* Styling for responsive design */
+@media (max-width: 768px) {
+    .tienda .producto, .carrito ul li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    button {
+        margin-top: 10px;
+    }
+
+    #subtotal1, #descuento, #subtotal2, #igv, #total {
+        font-size: 1rem;
+    }
+}
